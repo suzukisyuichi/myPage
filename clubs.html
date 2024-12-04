@@ -51,6 +51,7 @@
       .club-info {
         text-align: left;
         margin-top: 20px;
+        display: none; /* 初期状態は非表示 */
       }
       .club-info h2 {
         background: #2196f3;
@@ -60,6 +61,18 @@
       }
       .club-info p {
         margin: 10px 0;
+      }
+      .back-to-top {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .back-to-top:hover {
+        background: #fb8c00;
       }
     </style>
   </head>
@@ -71,10 +84,8 @@
       <button onclick="location.href='mailto:メールアドレス'">
         メールする
       </button>
-      <!-- ここに部活動ボタンを追加 -->
-      <button class="club-button" onclick="location.href='#basketball-club'">
-        部活動
-      </button>
+      <!-- 部活動ボタン -->
+      <button class="club-button" onclick="toggleClubInfo()">部活動</button>
       <!-- バスケットボール部の紹介セクション -->
       <div id="basketball-club" class="club-info">
         <h2>バスケットボール部</h2>
@@ -107,7 +118,35 @@
             >バスケットボール部公式サイト</a
           >
         </p>
+        <!-- 上に戻るボタン -->
+        <button
+          class="back-to-top"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        >
+          上に戻る
+        </button>
+        <!-- 下に戻るボタン -->
+        <button
+          class="back-to-top"
+          onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});"
+        >
+          下に戻る
+        </button>
       </div>
     </div>
+
+    <script>
+      function toggleClubInfo() {
+        var clubInfo = document.getElementById("basketball-club");
+        if (
+          clubInfo.style.display === "none" ||
+          clubInfo.style.display === ""
+        ) {
+          clubInfo.style.display = "block";
+        } else {
+          clubInfo.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
