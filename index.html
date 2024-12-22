@@ -4,88 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>紹介ページ</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background: #f0f0f0;
-      }
-      .container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      img {
-        width: 120px;
-        border-radius: 50%;
-        margin-top: 10px;
-      }
-      button {
-        padding: 10px 20px;
-        background: #4caf50;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      button:hover {
-        background: #45a049;
-      }
-      .club-button {
-        padding: 10px 20px;
-        background: #2196f3;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      .club-button:hover {
-        background: #1e88e5;
-      }
-      .club-info {
-        text-align: left;
-        margin-top: 20px;
-        display: none; /* 初期状態は非表示 */
-      }
-      .club-info h2 {
-        background: #2196f3;
-        color: #fff;
-        padding: 10px;
-        border-radius: 4px;
-      }
-      .club-info p {
-        margin: 10px 0;
-      }
-      .back-to-top {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #ff9800;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .back-to-top:hover {
-        background: #fb8c00;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <h1>鈴木脩一</h1>
       <img src="profile.png" alt="profile picture" />
       <p>Pokémon好き</p>
-      <button onclick="location.href='mailto:メールアドレス'">
-        メールする
-      </button>
-      <!-- 部活動ボタン -->
-      <button class="club-button" onclick="toggleClubInfo()">部活動</button>
+
+      <div class="button-container">
+        <!-- メールボタン -->
+        <button onclick="location.href='mailto:メールアドレス'">
+          メールする
+        </button>
+
+        <!-- 部活動ボタン -->
+        <button onclick="location.href='clubs.html'">部活動</button>
+
+        <!-- 電話リンク -->
+        <a href="tel:0123456789" class="button"
+          ><i class="fas fa-phone"></i> 電話する</a
+        >
+
+        <!-- LINE友だち追加ボタン -->
+        <a
+          href="https://line.me/ti/p/-D941zP1cM"
+          target="_blank"
+          class="button"
+        >
+          <img
+            height="36"
+            alt="友達追加"
+            src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+          />
+        </a>
+
+        <!-- Discord招待リンク -->
+        <a
+          href="https://discordapp.com/users/8344685638"
+          target="_blank"
+          class="button"
+        >
+          <i class="fab fa-discord"></i> フレンド追加
+        </a>
+      </div>
     </div>
   </body>
 </html>
