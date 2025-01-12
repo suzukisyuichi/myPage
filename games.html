@@ -17,21 +17,70 @@
       <p>ここでは、各ゲームのIDを紹介します。</p>
 
       <div class="game-id">
-        <h2>ゲーム名1</h2>
-        <p>ゲームID: exampleID123</p>
+        <h2>Fortnite</h2>
+        <p>
+          ゲームID: <span id="game1">モンTT</span>
+
+          </button>
+        </p>          
+          <button class="copy-button" onclick="copyToClipboard('game1')">
+            コピー
+          </button>
+        <p>
+          リンク:
+          <a href="https://example.com/game1" target="_blank"
+            >ゲーム名1の公式サイト</a
+          >
+        </p>
       </div>
 
       <div class="game-id">
         <h2>ゲーム名2</h2>
-        <p>ゲームID: exampleID456</p>
+        <p>
+          ゲームID: <span id="game2">exampleID456</span>
+          <button class="copy-button" onclick="copyToClipboard('game2')">
+            コピー
+          </button>
+        </p>
+        <p>
+          リンク:
+          <a href="https://example.com/game2" target="_blank"
+            >ゲーム名2の公式サイト</a
+          >
+        </p>
       </div>
 
       <div class="game-id">
         <h2>ゲーム名3</h2>
-        <p>ゲームID: exampleID789</p>
+        <p>
+          ゲームID: <span id="game3">exampleID789</span>
+          <button class="copy-button" onclick="copyToClipboard('game3')">
+            コピー
+          </button>
+        </p>
+        <p>
+          リンク:
+          <a href="https://example.com/game3" target="_blank"
+            >ゲーム名3の公式サイト</a
+          >
+        </p>
       </div>
-
-      <div class="button-container"></div>
+      <script>
+        function copyToClipboard(id) {
+          var text = document.getElementById(id).textContent;
+          var textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          alert("コピーしました: " + text);
+        }
+      </script>
+      <div class="button-container">
+        <!-- 紹介ページに戻るボタン -->
+        <button onclick="location.href='index.html'">紹介ページへ戻る</button>
+      </div>
     </div>
   </body>
 </html>
