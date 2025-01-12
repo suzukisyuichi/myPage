@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
+    <script>
+      $(document).ready (function () {
+        $("#header").load("compornents/header.html");
+      });
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -12,6 +17,7 @@
     <title>ゲームID紹介ページ</title>
   </head>
   <body>
+    <div id="header"></div>
     <div class="container">
       <h1>ゲームID紹介ページ</h1>
       <p>ここでは、各ゲームのIDを紹介します。</p>
