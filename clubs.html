@@ -4,57 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready (function () {
+      $(document).ready(function () {
         $("#header").load("compornents/header.html");
+        $("#footer").load("compornents/footer.html");
+        $("#button").load("compornents/button.html");
       });
     </script>
-    <title>部活動紹介ページ</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>部活動紹介ページ</title>
   </head>
   <body>
     <div id="header"></div>
     <div class="container">
       <h1>部活動紹介ページ</h1>
+      <p>ここでは、各部活動の情報を紹介します。</p>
 
-      <!-- HOMEボタン -->
-      <button onclick="location.href='index.html'">HOME</button>
-
-      <!-- バスケットボール部の紹介セクション -->
       <div class="club">
         <h2>バスケットボール部</h2>
         <p>
-          バスケットボール部は、技術向上とチームワークの強化を目指して活動しています。部員たちは初心者から経験者まで幅広く、共に練習しながら成長しています。
+          バスケットボール部は、技術向上とチームワークの強化を目指して活動しています。
         </p>
-        <p>
-          <strong>練習日程</strong>:
-          毎週火曜日と木曜日の放課後、週末には試合や特別練習があります。
-        </p>
-        <p><strong>練習場所</strong>: 学校の体育館</p>
-        <p><strong>指導者</strong>: ゴミコーチ（元プロバスケットボール選手）</p>
-        <p>
-          <strong>活動内容</strong>:
-          基礎練習、戦術練習、試合形式の練習、対外試合への参加
-        </p>
-        <p><strong>部員数</strong>: 約20名（中学生・高校生）</p>
-        <p>
-          <strong>目標</strong>:
-          地区大会での優勝、チームメンバー全員のスキルアップ、強いチームワークを築くこと
-        </p>
-        <p>s
-          <strong>メンバー募集</strong>:
-          バスケットボール部では、新入部員を随時募集しています。興味のある方は練習見学や体験練習にぜひご参加ください。初心者も大歓迎です！
-        </p>
-        <p>
-          <strong>連絡先</strong>: メール: basketballclub@example.com |
-          公式ウェブサイト:
-          <a href="https://example.com" target="_blank"
-            >バスケットボール部公式サイト</a
-          >
-        </p>
-
-        </button>
       </div>
+
+      <div class="club">
+        <h2>サッカー部</h2>
+        <p>サッカー部は、楽しさと競技力向上を両立させた活動を行っています。</p>
+      </div>
+
+      <div class="club">
+        <h2>テニス部</h2>
+        <p>テニス部は、初心者から経験者まで楽しめる練習をしています。</p>
+      </div>
+
+      <div class="button-container">
+        <!-- 紹介ページに戻るボタン -->
+      </div>
+      <div id="button"></div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>

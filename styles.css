@@ -58,3 +58,18 @@ a.button:hover {
 .copy-button:hover {
   background: #5a0000; /* ボタンホバー時の色 */
 }
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+.header a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 18px;
+}
+.header a:hover {
+  text-decoration: underline;
+}
